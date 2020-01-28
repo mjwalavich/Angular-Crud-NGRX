@@ -1,0 +1,31 @@
+<div class="example-container">
+    <div>
+        <mat-form-field>
+            <input matInput [(ngModel)]="employee.name" placeholder="Employee Name">
+        </mat-form-field>
+    </div>
+    <div>
+
+        <mat-form-field>
+            <input matInput [(ngModel)]="employee.email" placeholder="Employee email">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <input matInput [(ngModel)]="doh" [matDatepicker]="picker" placeholder="Date of Hire">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div>
+        <label>Gender: </label>
+        <mat-radio-group [(ngModel)]="employee.gender">
+            <mat-radio-button value="male" style="margin-right: 5px;">Male </mat-radio-button>
+            <mat-radio-button value="female">Female</mat-radio-button>
+        </mat-radio-group>
+    </div>
+    <div mat-dialog-actions>
+            <button mat-button (click)="onNoClick()">Cancel</button>
+            <button mat-button (click)="onUpdateClick()" cdkFocusInitial>Update</button>
+        </div>
+</div>

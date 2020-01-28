@@ -1,0 +1,28 @@
+<div class="example-container">
+    <mat-form-field>
+        <input matInput [(ngModel)]="formInput.name"  placeholder="Employee Name" >
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="formInput.email"  placeholder="Employee email" >
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="formInput.doh" [matDatepicker]="picker" placeholder="Date of Hire">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <div>
+        <label>Gender: </label>
+        <mat-radio-group [(ngModel)]="formInput.gender">
+            <mat-radio-button value="male">Male</mat-radio-button>
+            <mat-radio-button value="female">Female</mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <div>
+        <button mat-raised-button color="accent" (click)="onFormSubmit(event)" class="submit-button">
+            Submit
+        </button>
+    </div>
+
+
+</div>

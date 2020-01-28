@@ -1,0 +1,39 @@
+{
+  "records": [
+    {
+      "name": "Tim McGraw",
+      "email": "Tmcgraw@gmail.com",
+      "doh": "Sun Jan 19 2020",
+      "gender": "male",
+      "id": 2
+    },
+    {
+      "name": "Garth Brooks",
+      "email": "Gbrooks@gmail.com",
+      "doh": "Sun Jan 05 2020",
+      "gender": "male",
+      "id": 3
+    },
+    {
+      "name": "Carrie Underwood",
+      "email": "Cunderwood@gmail.com",
+      "doh": "Wed Jan 08 2020",
+      "gender": "female",
+      "id": 4
+    },
+    {
+      "name": "Dolly Parton",
+      "email": "Dparton@gmail.com",
+      "doh": "Wed Jan 08 2020",
+      "gender": "female",
+      "id": 5
+    },
+    {
+      "name": "dmatt",
+      "email": "mjwalavich@gmail.com",
+      "doh": "Wed Jan 01 2020",
+      "gender": "male",
+      "id": 6
+    }
+  ]
+}

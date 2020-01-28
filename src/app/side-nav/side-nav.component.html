@@ -1,0 +1,27 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened class="drawer-area" fixedInViewport
+      [attr.role]="(isMobile$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isMobile$ | async) ? 'over' : 'side'"
+      [opened]="(isMobile$ | async) === false">
+        <div>
+            <button mat-button color="primary" class="button add-btn" (click)="showComponent('add-employee')">
+                <mat-icon aria-hidden="false" aria-label="Add">add</mat-icon>
+                Add Employee
+            </button>
+        </div>
+        <div>
+            <button mat-button color="primary" class="button" (click)="showComponent('view-employees')">
+                <mat-icon aria-hidden="false" aria-label="List">list</mat-icon>
+                View Employees
+            </button>
+        </div>
+
+
+    </mat-drawer>
+    <mat-drawer-content class="main-area" >
+        <app-add-employee-form *ngIf="selectedComponent === 'add-employee'"(showComponentEvent)="showComponent($event)">
+        </app-add-employee-form>
+        <app-view-employees *ngIf="selectedComponent === 'view-employees'" >
+        </app-view-employees>
+    </mat-drawer-content>
+</mat-drawer-container>
